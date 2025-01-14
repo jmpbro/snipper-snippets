@@ -4,30 +4,30 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 
-var todos = new List<Todo>();
+var snippets = new List<Snippet>();
 
-app.MapGet("/todos", () => todos);
+app.MapGet("/snippet", () => snippets);
 
-app.MapGet("/todos/{id}", Results<Ok<Todo>, NotFound> (int id) =>
+app.MapGet("/snippet/{id}", Results<Ok<Snippet>, NotFound> (int id) =>
 {
-    var targetTodo = todos.SingleOrDefault(t => id == t.Id);
-    return targetTodo is null
+    var targetSnippet = snippets.SingleOrDefault(t => id == t.Id);
+    return targetSnippet is null
         ? TypedResults.NotFound()
-        : TypedResults.Ok(targetTodo);
+        : TypedResults.Ok(targetSnippet);
 });
 
-app.MapPost("/todos", (Todo task) =>
+app.MapPost("/snippet", (Snippet snippet) =>
 {
-    todos.Add(task);
-    return TypedResults.Created("/todos/{task.Id}", task);
+    snippets.Add(snippet);
+    return TypedResults.Created("/snippet/{snippet.Id}", snippet);
 });
 
-app.MapDelete("/todos/{id}", (int id) =>
+app.MapDelete("/snippet/{id}", (int id) =>
 {
-    todos.RemoveAll(t => id == t.Id);
+    snippets.RemoveAll(t => id == t.Id);
     return TypedResults.NoContent();
 });
 
 app.Run();
 
-public record Todo(int Id, string Name, DateTime DueDate, bool IsCompleted);
+public record Snippet(int Id, string Language, string Code);
