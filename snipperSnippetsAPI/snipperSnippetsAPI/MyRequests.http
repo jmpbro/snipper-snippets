@@ -1,17 +1,16 @@
-GET http://localhost:5059/todos
+GET http://localhost:5011/snippet
 
 ###
 
-POST http://localhost:5059/todos
+POST http://localhost:5011/snippet
 Content-Type: application/json
 
 {
-    "id": 1,
-    "name": "Write demo",
-    "dueDate": "2021-12-31",
-    "isComplete": false
+      "id": 3,
+      "language": "Python",
+      "code": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\n    def area(self):\n        return 3.14 * self.radius ** 2"
 }
 
 ###
 
-DELETE http://localhost:5059/todos/2
+DELETE http://localhost:5011/snippet/3
