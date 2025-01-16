@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snipperSnippetsAPI", "snipperSnippetsAPI.csproj", "{31958972-AC13-A7A1-5D01-9A18131F8E1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31958972-AC13-A7A1-5D01-9A18131F8E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31958972-AC13-A7A1-5D01-9A18131F8E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31958972-AC13-A7A1-5D01-9A18131F8E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31958972-AC13-A7A1-5D01-9A18131F8E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27A44A02-5456-4012-91F1-C7D3AA66AD03}
+	EndGlobalSection
+EndGlobal
