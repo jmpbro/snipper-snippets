@@ -1,2 +1,2 @@
 # snipper-snippets
-Multiverse Back-End Project - WebAPI.
+Multiverse Back-End Module - WebAPI.
