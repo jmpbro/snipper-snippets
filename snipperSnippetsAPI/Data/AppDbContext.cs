@@ -1,12 +1,16 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SnipperSnippet.Models;
 
-namespace SnipperSnippet.Data
+public class AppDbContext : IdentityDbContext<User>
 {
-    public class AppDbContext : IdentityDbContext
-    {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }
-    }
+    public DbSet<User> Users { get; set; }
+}
+
+public class User : IdentityUser
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
 }
