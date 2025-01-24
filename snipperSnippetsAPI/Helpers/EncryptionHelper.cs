@@ -4,8 +4,12 @@ using System.Text;
 
 public static class EncryptionHelper
 {
+#pragma warning disable CS8601 // Possible null reference assignment.
     private static string key = Environment.GetEnvironmentVariable("ENCRYPTION_KEY"); // Store key securely in environment variable
+#pragma warning restore CS8601 // Possible null reference assignment.
+#pragma warning disable CS8601 // Possible null reference assignment.
     private static string iv = Environment.GetEnvironmentVariable("ENCRYPTION_IV"); // Store IV securely in environment variable
+#pragma warning restore CS8601 // Possible null reference assignment.
 
     public static string EncryptString(string text)
     {
@@ -48,5 +52,10 @@ public static class EncryptionHelper
                 }
             }
         }
+    }
+
+    internal static string EncryptString(object snippetText)
+    {
+        throw new NotImplementedException();
     }
 }

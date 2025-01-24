@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-
 namespace SnipperSnippets.Models
+
 {
     public class SnippetsContext : DbContext 
     {
